@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- FontAwesome for icons -->
+</head>
+<body>
+  <!-- Navigation Bar -->
+<nav class="NavBar">
+  <div class="Logo">
+    <span class="daf">daf<span class="code">CODE</span></span>
+  </div>
+  <div class="MenuIcon" onclick="toggleMenu()">
+    &#9776; <!-- Hamburger icon -->
+  </div>
+  <ul class="Menu" id="menu">
+    <li class="MenuItem" onclick="handleScrollTo(homeRef)">HOME</li>
+    <li class="MenuItem" onclick="handleScrollTo(aboutRef)">ABOUT</li>
+    <li class="MenuItem" onclick="handleScrollTo(skillsRef)">SKILLS</li>
+    <li class="MenuItem" onclick="handleScrollTo(projectsRef)">PROJECTS</li>
+    <li class="MenuItem" onclick="handleScrollTo(contactRef)">CONTACT</li>
+  </ul>
+</nav>
+
+
+  <!-- Home Section -->
+  <section class="Home" id="home">
+    <div class="IntroText">
+        <h2 class="Welcome">WELCOME TO MY WORLD</h2>
+        <h1 class="Name"><b>Hi, I'm <span class="Span">DAFRAOUI ELMEHDI</span></b></h1>
+        <h3 class="Domain">a Full Stack Web Developer.</h3>
+        <p class="Description">Creative full stack developer, Proficient in HTML, Tailwind CSS, JavaScript, React, and PHP</p>
+        <div class="social-icons">
+          <i class="fab fa-linkedin" onclick="handleLinkedin()"></i>
+          <i class="fab fa-github" onclick="handleGithub()"></i>
+        </div>      
+        <button class="ButtonResumer" onclick="handleCv()">Show CV</button>
+    </div>
+    <img class="IntroImage" src="./GLD_6001 copie-fotor-20240913202852.png" alt="Intro Image">
+  </section>
+
+  <!-- About Section -->
+  <section class="About" id="about">
+    <h2 class="Title">About Me</h2>
+    <p class="Para">Hey, I'm an entry-level React/PHP developer based in Casablanca, passionate about Art and Digital Design.</p>
+    <div class="DivCard">
+      <div class="Card">
+        <h1>2021 - 2022</h1>
+        <h4>Baccalauréat in Sc Physics and Chemistry / ABI CHOUAIB DOUKALI / CASABLANCA</h4>
+      </div>
+      <div class="Card">
+        <h1>2022 - 2024</h1>
+        <h4>Diploma Technician Specialized in IT Development at Centre de Formation Professionnelle Multiservices Casablanca</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="Skills" id="skills">
+    <h2 class="SpanSkills">My Skills</h2>
+    <p class="Para">Here are my skills to represent my expertise</p>
+    <div class="Progress">
+      <div class="Bar">
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 95%;"></div>
+          <span class="ProgressText">95% HTML</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 90%;"></div>
+          <span class="ProgressText">90% React JS</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 85%;"></div>
+          <span class="ProgressText">85% SQL</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 90%;"></div>
+          <span class="ProgressText">90% PHP</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 75%;"></div>
+          <span class="ProgressText">75% C#</span>
+        </div>
+      </div>
+      <div class="Bar">
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 95%;"></div>
+          <span class="ProgressText">95% CSS</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 90%;"></div>
+          <span class="ProgressText">90% Bootstrap</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 80%;"></div>
+          <span class="ProgressText">80% NoSQL (MongoDB)</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 90%;"></div>
+          <span class="ProgressText">90% TailwindCSS</span>
+        </div>
+        <div class="ProgressBar">
+          <div class="ProgressFill" style="width: 90%;"></div>
+          <span class="ProgressText">90% JavaScript</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="DivGlobal" id="projects">
+    <h2 class="SpanSkills">Projects</h2>
+    <p class="Para">Here are all my projects to represent my expertise</p>
+    <div class="ProjectDiv">
+        <div class="CardProj">
+            <img class="card-img-top" src="./esing.png" alt="Card image">
+            <div class="card-body">
+                <h3 class="card-title" style="margin-top: 10px;">E-Signe Digital</h3>
+                <p class="card-text">Le projet de signature numérique permet de signer électroniquement des documents de manière sécurisée en utilisant des certificats numériques pour garantir l'intégrité et l'authenticité des signatures.</p>
+                <div class="Flow">
+                    <h4 onclick="handleesign()">More Details</h4>
+                </div>
+            </div>
+        </div>
+        <!-- More Project Cards -->
+        <div class="CardProj">
+            <img class="card-img-top" class="Scan" src="./Scan.png" alt="Card image">
+            <div class="card-body">
+                <h3 class="card-title" style="margin-top: 10px;">Numérisation Sécurisée pour les Entreprises</h3>
+                <p class="card-text">numérisation et la protection des documents sensibles, avec des contrôles d'accès stricts et un cryptage avancé pour garantir la confidentialité.</p>
+                <div class="Flow">
+                    <h4 onclick="handleScan()">More Details</h4>
+                </div>
+            </div>
+        </div><div class="CardProj">
+            <img class="card-img-top" src="./collegeParis.png" alt="Card image">
+            <div class="card-body">
+                <h3 class="card-title" style="margin-top: 10px;">College De Paris</h3>
+                <p class="card-text">Le Collège de Paris est une communauté d'établissements d'enseignement supérieur et d'organismes de formation.</p>
+                <div class="Flow">
+                    <h4>More Details</h4>
+                </div>
+            </div>
+        </div><div class="CardProj">
+        <img class="card-img-top" src="./stayhealthy.png" alt="Card image">
+        <div class="card-body">
+            <h3 class="card-title" style="margin-top: 10px;">StayHealthy</h3>
+            <p class="card-text">"StayHealthy" est une plateforme de bien-être complète offrant des plans personnalisés, des conseils d'experts et des outils interactifs pour améliorer votre forme physique, votre alimentation et votre bien-être mental. Atteignez vos objectifs santé avec StayHealthy, votre partenaire de confiance.</p>
+            <div class="Flow">
+                <h4 onclick="handleStay()">More Details</h4>
+            </div>
+        </div>
+    </div>
+    <div class="marge">
+      <div class="CardProj">
+        <img class="card-img-top" class="Scan" src="./systeme notariaux.png" alt="Card image">
+        <div class="card-body">
+            <h3 class="card-title" style="margin-top: 10px;">Gestion Digitale des Actes Notariaux</h3>
+            <p class="card-text">La plateforme "Gestion Digitale des Actes Notariaux" facilite la gestion sécurisée des actes notariés grâce à des outils numériques innovants. Elle offre des fonctionnalités comme la signature électronique et l'archivage sécurisé pour simplifier et accélérer les procédures légales.</p>
+            <div class="Flow">
+                <h4 onclick="handleNotariaux()">More Details</h4>
+            </div>
+        </div>
+        </div><div class="CardProj">
+          <img class="card-img-top" class="Scan" src="./users.png" alt="Card image">
+          <div class="card-body">
+              <h3 class="card-title" style="margin-top: 10px;">Système de Gestion des Utilisateurs</h3>
+              <p class="card-text">La plateforme "Système de Gestion des Utilisateurs" centralise la gestion des comptes avec des fonctionnalités de suivi, de rôles et de sécurité. Elle simplifie la gestion des utilisateurs tout en assurant la protection des données.</p>
+              <div class="Flow">
+                  <h4 onclick="handleUsers()">More Details</h4>
+              </div>
+          </div>
+      </div>
+      <div class="CardProj">
+        <img class="card-img-top" class="Scan" src="./bank.png" alt="Card image">
+        <div class="card-body">
+            <h3 class="card-title" style="margin-top: 10px;">Plateforme Avancée de Gestion Bancaire</h3>
+            <p class="card-text">La Plateforme Avancée de Gestion Bancaire permet une gestion complète et sécurisée des opérations financières avec des outils de suivi, d'automatisation et de reporting. Elle optimise la gestion des comptes et assure la conformité réglementaire.</p>
+            <div class="Flow">
+                <h4 onclick="handleBancaire()">More Details</h4>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="ContactGLB" id="contact">
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+        <form id="contactForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+        <div class="social-icons">
+          <i class="fab fa-linkedin" onclick="handleLinkedin()"></i>
+          <i class="fab fa-github" onclick="handleGithub()"></i>
+        </div> 
+        <p id="statusMessage"></p>
+      </div>
+  </section>
+  
+
+  <!-- EmailJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script>
+
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+
+    (function() {
+      // Replace 'your_user_id' with the actual Public Key from the EmailJS dashboard
+      emailjs.init("rwBGxAnTyfQ3fe1wT"); // Initialize EmailJS with your User ID (Public Key)
+    })();
+  
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+  
+      // Validate the form fields
+      if (!name || !email || !message) {
+        document.getElementById('statusMessage').textContent = "All fields are required!";
+        document.getElementById('statusMessage').style.color = "red";
+        return;
+      }
+  
+      // Set email parameters
+      const emailParams = {
+        from_name: name,
+        from_email: email,
+        message: message,
+        to_email: 'dafraouimehdi05@gmail.com' // The recipient's email address
+      };
+  
+      // Send the email using EmailJS
+      emailjs.send('service_m2rv6rd', 'template_fmdjx11', emailParams)
+        .then(function(response) {
+          document.getElementById('statusMessage').textContent = "Message sent successfully!";
+          document.getElementById('statusMessage').style.color = "green";
+        }, function(error) {
+          document.getElementById('statusMessage').textContent = "Failed to send the message.";
+          document.getElementById('statusMessage').style.color = "red";
+          console.error("Failed to send the message.", error);
+          // Detailed error information
+          alert("Error: " + JSON.stringify(error));
+        });
+  
+      // Clear the form fields
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+  
+  
+
+
+  <script>
+    const homeRef = document.getElementById('home');
+    const aboutRef = document.getElementById('about');
+    const skillsRef = document.getElementById('skills');
+    const projectsRef = document.getElementById('projects');
+    const contactRef = document.getElementById('contact');
+
+    // Set active section and scroll to it
+    function handleScrollTo(ref) {
+    ref.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function handleCv() {
+    window.open('./Update New CV Mehdi word .pdf', '_blank');
+    }
+
+    function handleesign() {
+    window.open('https://github.com/DafraouiMehdi/E-Signe', '_blank');
+    }
+
+    function handleScan() {
+    window.open('https://github.com/DafraouiMehdi/Scanner', '_blank');
+    }
+
+    function handleStay() {
+    window.open('https://github.com/DafraouiMehdi/StayHealthy', '_blank');
+    }
+
+    function handleNotariaux() {
+    window.open('https://github.com/DafraouiMehdi/Gestion_Notariaux', '_blank');
+    }
+
+    function handleUsers() {
+    window.open('https://github.com/DafraouiMehdi/Redux-Toolkit-Gestion_User', '_blank');
+    }
+
+    function handleBancaire() {
+    window.open('https://github.com/DafraouiMehdi/Systeme-bancaire', '_blank');
+    }
+
+    function handleLinkedin() {
+      window.open('https://www.linkedin.com/in/el-mehdi-dafraoui-81054b263/' , '_blank')
+    }
+
+    function handleGithub() {
+      window.open('https://github.com/DafraouiMehdi' , '_blank')
+    }
+
+
+    function handleHome() {
+    handleScrollTo(homeRef);
+    }
+
+    function handleAbout() {
+    handleScrollTo(aboutRef);
+    }
+
+    function handleSkills() {
+    handleScrollTo(skillsRef);
+    }
+
+    function handleProjects() {
+    handleScrollTo(projectsRef);
+    }
+
+    function handleContact() {
+    handleScrollTo(contactRef);
+    }
+</script>
+</body>
+</html>
+
