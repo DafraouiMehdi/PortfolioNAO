@@ -60,17 +60,27 @@
   align-items: center;
 }
 
-.NavBar .daf {
-  font-size: 34px;
-  font-weight: bold;
-  animation: fadeIn 0.5s ease-out;
+.NavBar .imglogo {
+  width: 50px;
+  height: 50px;
+  animation: logoAnimation 2s ease-in-out infinite;
   display: flex;
-  color: #000000;
+  justify-content: center;
+  align-items: center;
 }
 
-.NavBar .daf .code {
-  color: #5977d9;
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }
+
 
 .NavBar .Menu {
   display: flex;
@@ -420,6 +430,7 @@
     display: inline-block;
     overflow-wrap: break-word;
     word-break: break-word;
+    width: 100%;
   }
   
   .Description {
@@ -600,61 +611,109 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Taille uniforme pour les images dans les cartes */
 .card-img-top {
   width: 100%;
-  height: auto;
-  transition: transform 0.3s ease; /* Image zoom on hover */
+  height: 200px; /* Hauteur fixe pour toutes les images */
+  object-fit: cover; /* Garde l'image proportionnée tout en remplissant l'espace */
+  transition: transform 0.3s ease; /* Effet de zoom au survol */
 }
 
+.Cardimged {
+  width: 100px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin: 20px auto; /* Centre horizontalement et ajoute de l'espace en haut et en bas */
+  padding: 10px;
+}
+
+.Sized {
+  width: 200px;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  margin: 20px auto; /* Centre horizontalement et ajoute de l'espace en haut et en bas */
+  padding: 10px;
+}
+
+/* Pour les images elles-mêmes */
+.Cardimged img, .Sized img {
+  margin-top: 20px; /* Ajoute un espace au-dessus des images */
+  display: block; /* Empêche les marges non désirées causées par inline-block */
+}
+
+
+
+/* Zoom léger au survol */
 .CardProj:hover .card-img-top {
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.05); /* Zoom plus léger pour l'harmoniser */
 }
 
+/* Styles pour la structure des cartes */
+.CardProj {
+  width: 100%;
+  max-width: 300px; /* Limite la largeur maximale des cartes */
+  flex: 1;
+  margin: 20px; /* Espacement entre les cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de carte */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Garde les images bien dans la carte */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Agrandissement de l'ombre au survol */
+.CardProj:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation pour le contenu */
 .card-body {
   padding: 15px;
   opacity: 0;
-  animation: fadeIn 1s ease-in 0.4s forwards; /* Delayed fade-in for card content */
+  animation: fadeIn 1s ease-in 0.4s forwards; /* Apparition progressive du contenu */
 }
 
-.card-title {
-  margin-top: 10px;
+/* Centrage du titre et du texte */
+.card-title, .card-text {
   text-align: center;
+  margin: 10px 0;
 }
 
-.card-text {
-  margin-bottom: 15px;
-  text-align: center;
+/* Mise en page pour la grille de projets */
+.ProjectDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .Flow {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
 }
 
-.Flow h4 {
-  cursor: pointer;
-  color: #007bff; /* Link color */
-  text-decoration: underline;
-  transition: color 0.3s ease; /* Smooth color change on hover */
+.Flowjuice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.Flowjuice h4 {
+  color: #0077b5;
+  cursor: pointer; 
   text-align: center;
 }
 
-.Flow h4:hover {
-  color: #0056b3; /* Darker color on hover */
+.Flow h4{
+  color: #0077b5;
+  cursor: pointer; 
 }
 
-.marge {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.marge .CardProj {
-  flex: 1 1 calc(33.333% - 20px);
-}
 
 /* Responsive Design */
 
